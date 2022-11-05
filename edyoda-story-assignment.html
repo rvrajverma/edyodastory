@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edyoda | Free online courses and tutorials to learn programming</title>
+    <style>
+        body {
+            background: #fff;
+            padding: 0%;
+            margin: 0%;
+            font-family: sans-serif;
+            font-size: 0.875rem;
+        }
+
+        .home-page {
+            width: 1140px;
+            margin: 0 auto;
+        }
+
+        .header {
+            height: auto;
+            width: 100%;
+            position: fixed;
+            background: white;
+            top: 0;
+            z-index: 999;
+            border: 1px solid #b4c7f8;
+        }
+
+        .header-logo {
+            margin: 10px;
+            color: #0084ff;
+            font-weight: 900;
+            font-size: 32px;
+            background-color: white;
+
+        }
+
+        .header-stories {
+
+            color: black;
+            margin-left: 20px;
+            background-color: white;
+            font-size: large;
+
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-top: 50px;
+            /* line-height: 1.94;
+            letter-spacing: -.9px; */
+            font-family: sans-serif;
+        }
+
+        .trending-post-images {
+            display: flex;
+            height: 400px;
+        }
+
+        .left-banner {
+            width: 55%;
+            background: url(https://edyoda.s3.amazonaws.com/media/blog-images/ace-soft-skills-small.jpg)no-repeat;
+            background-position: center;
+            border-radius: 4px;
+        }
+
+        .right-banner {
+            width: 45%;
+
+        }
+
+        .job-interview {
+            background: url(https://edyoda.s3.amazonaws.com/media/blog-images/aptitude-small.jpg)no-repeat;
+            height: 48%;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            border-radius: 4px;
+
+        }
+
+        .learn-cloud-computing {
+            background: url(https://edyoda.s3.amazonaws.com/media/blog-images/learn_cloud_computing.jpeg)no-repeat;
+            height: 50%;
+            width: 100%;
+            margin-top: 2%;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            border-radius: 4px;
+
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            /* margin-left: 50px; */
+        }
+
+        .icon {
+            display: contents;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .icon img {
+            float: left;
+            width: 25px;
+            height: 25px;
+            background: transparent;
+        }
+
+        .filter {
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        .categ_container {
+            padding: 12px;
+            margin: 2px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: 16px;
+        }
+
+
+        .categories {
+            padding: 6px 14px;
+            border: 1px solid #0084ff;
+            border-radius: 15px;
+            margin: 4px;
+            width: auto;
+            cursor: pointer;
+        }
+
+        .anchor-category {
+            text-decoration: none;
+            color: #0084ff;
+        }
+
+        .blog-container {
+            border: 10px solid black;
+            display: flex;
+        }
+
+        .blog-design {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 10px;
+            height: 420px;
+        }
+
+        .blog-cards {
+            padding-bottom: 5px;
+            /* background: url(https://edyoda.s3.amazonaws.com/media/blog-images/7_reasons_to_learn_Python_u3lFION.jpg) no-repeat; */
+            height: 180px;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .blog-cards img {
+            width: 100%;
+            height: 100%;
+            /* border-top-left-radius: 5px;
+            border-top-right-radius: 5px; */
+        }
+
+        .author {
+            font-size: 20px;
+            margin: 0%;
+            padding: 4px;
+            color: #3588d6;
+
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        .date {
+            font-size: 14px;
+            font-weight: 300;
+            color: #000;
+            margin-top: 0.3em;
+        }
+
+        .blog-text {
+            padding: 0 20px 20px;
+            opacity: .5;
+            text-align: justify;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            /* number of lines to show */
+            line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+
+        .author-cont {
+            margin: 15px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            border-radius: 4px;
+        }
+
+        .grid-item {
+            padding: 0px 10px 0px 0px;
+            text-align: center;
+            margin: 25px 0 0px;
+            border-radius: 24px;
+
+        }
+
+        .header-edyoda-logo {
+            display: inline-block;
+            border: 1px solid black;
+
+        }
+
+        .header-container {
+            font-size: 18px;
+            margin-left: 400px;
+            /* min-width: 23em; */
+            opacity: .6;
+            word-break: break-all;
+
+            font-family: Raleway, sans-serif;
+            /* font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            /* line-height: 1; */
+            /* letter-spacing: .4px;
+            text-align: left;
+            color: rgba(0, 0, 0, .6); */
+            /* margin-top: 0.5em; */
+        }
+
+        footer {
+            background-color: #172746;
+            height: auto;
+            width: auto;
+        }
+
+        .footer-grid {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .footer-edyoda {
+            padding: 0%;
+            margin: 50px;
+            color: white;
+        }
+
+        .address {
+            overflow: hidden;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .btn-main {
+            float: right;
+            height: auto;
+            width: auto;
+            padding: 15px 25px;
+            margin-right: 100px;
+            margin-top: 20px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: none;
+            color: #fff;
+            font-family: Raleway, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .06em;
+            font-style: normal;
+            background: linear-gradient(269deg, #0048ff, #0096ff);
+        }
+
+        .div-btn-main {
+            display: inline-flex;
+            float: right;
+            margin-top: 10px;
+        }
+
+        .anchor-link {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .header-text {
+            display: inline-flex;
+            padding: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-edyoda-logo">
+            <span class="header-logo">EDYODA</span><br>
+            <p><i class="header-stories">Stories</i></p>
+
+
+
+        </div>
+        <div class="header-text">
+            <span class="header-container">EdYoda is free learning and knowledge
+                sharing platform for techies</span>
+        </div>
+        <div class="div-btn-main">
+            <a href="https://www.edyoda.com/home">
+                <button class="btn-main">Go to Main Website</button>
+            </a>
+        </div>
+    </div>
+
+
+
+    <main class="home-page">
+
+        <h1>Trending Posts</h1>
+        <div class="trending-post-images">
+            <div class="left-banner">
+            </div>
+            <div class="right-banner">
+                <div class="job-interview">
+                </div>
+                <div class="learn-cloud-computing">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Latest Posts</h2>
+        </div>
+        <div class="icon">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAbFBMVEUAAAA1gME1gME1f8A1gME1gMExd7Q0f8AxeLYzfb00fr80f8Aze7oze7o1gMA0fr4zfLwzfb0zfb0yerg0fb00f8AzfLszfLwzfr40f780f8Azfb00f8A0f8AzfLwzfr81gME0fr4zfLs1gMEkRxAZAAAAI3RSTlMAHOP9f/oT1RAO281OROfhFaSUSkCwnpmOcTfFim9YB/AmGRclE4kAAAF9SURBVGje7dfrboJAEAXgA7jLXRAExRu2vP87No1NJjYpexm3SZv5/vgD9QB7mCwQQggh/rI2YtCwUpUxw7mGhTZdWMoWZlHMC4kjmL0Xv3Al8zHhZCQTbOid159/fRwyWIlK+p2rQcPSvnBLoa+mJ1jrG7+bVdRwcLsvHpoeLuaLepxh4nAd9xvc5F1ityx0Juoyw5EeXZely2DAL/JOw8M+NafQ4TKCl7pxeED28FRtrctbw9uk1u4YHdhW8Jd39LislXcCRzZalEt1OVj0YF76MQPTyVjkQYOtprlvmO4cfbysoOnOc6UiG6Y7Q36kIn8v7xWvkh1+mPvqmIPBtIExb0385z5/ups3MM+2b3ixi3nXy7eREAmREAmREAmRkPWQsw4Xkiz05hMqJEkoI0wIZTQVEC7k8VH0CGDztB5pDRKkXfTWHjJkOMGAX+Fdi0CowqMGCROiDpQRKkR1GcLZ0PtbODf1OUquOULKpzQ+VwitjTIIIYQQ/9wHYyfu5wm8dM0AAAAASUVORK5CYII="
+                alt="logo">
+            <span class="filter">Filter by Category</span>
+        </div>
+        <div class="categ_container">
+            <span class="categories"><a class="anchor-category" href="#">All</a></span>
+            <span class="categories"><a class="anchor-category" href="#">Artificial Intelligence</a></span>
+            <span class="categories"><a class="anchor-category" href="#">Cloud Computing</a></span>
+            <span class="categories"><a class="anchor-category" href="#">DevOps</a></span>
+            <span class="categories"><a class="anchor-category" href="#">Progaramming Languages</a></span>
+            <span class="categories"><a class="anchor-category" href="#">Mobile Application Development</a></span>
+            <span class="categories"><a class="anchor-category" href="#">Techonology and Tools</a></span>
+            <span class="categories"><a class="anchor-category" href="#">Get a Job in a Tech Company</a></span>
+            <span class="categories"><a class="anchor-category" href="#">Others</a></span>
+        </div>
+
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <a class="anchor-link"
+                    href="https://www.edyoda.com/stories/fresh-graduate-or-it-professional-looking-for-a-new-job-7-reasons-to-learn-python-now">
+                    <div class="blog-design">
+                        <div class="blog-cards">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/7_reasons_to_learn_Python_u3lFION.jpg"
+                                alt="Fresh graduate or IT professional">
+                        </div>
+                        <div class="author-cont">
+
+                            <h3>Fresh graduate or IT professional</h3>
+                            <span class="author">Author</span>
+                            <span class="date">| 12 feb 2022</span>
+                        </div>
+                        <p class="blog-text">If you are a fresh graduate - or new to IT - looking for the next job, you
+                            need
+                            to
+                            read this.The last couple of years zekeLabs gave me a unique opportunity to assess
+                            technology
+                            demand
+                            in the
+                            industry and also to evaluate available</p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a class="anchor-link" href="https://www.edyoda.com/stories/introducing-you-all-to-edyoda-wwwedyodacom">
+                    <div class="blog-design">
+                        <div class="blog-cards">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/edyoda-learn-technology-for-free.jpg"
+                                alt="Introducing you all to EdYoda - www.edyoda.com">
+
+                        </div>
+                        <div class="author-cont">
+                            <h3>Introducing you all to EdYoda - www.edyoda.com</h3>
+                            <span class="author">Author</span>
+                            <span class="date">| 12 feb 2022</span>
+                        </div>
+                        <p class="blog-text">Really ecstatic and immensely proud to introduce you all to our latest
+                            attempt
+                            of adding value and making an impact to the world we are a part of.Introducing you all to
+                            EdYoda
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a class="anchor-link"
+                    href="https://www.edyoda.com/stories/from-identity-crisis-to-the-success-story-the-devops-revolution">
+                    <div class="blog-design">
+                        <div class="blog-cards">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/devops-edYoda-blog-small.jpg"
+                                alt="From identity crisis to the Success Story - The DevOps revolution!">
+                        </div>
+                        <div class="author-cont">
+                            <h3>From identity crisis to the Success Story - The DevOps revolution!</h3>
+                            <span class="author">Kalyan Mahalingam </span>
+                            <span class="date">| 05 Jul 2019</span>
+                        </div>
+                        <p class="blog-text">DevOps is a paradigm shift in the way how software products are being built
+                            in
+                            the modern day Information Technology (IT) organizations. It is becoming the de-facto
+                            component
+                        </p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a class="anchor-link"
+                    href="https://www.edyoda.com/stories/typical-day-of-a-data-scientist-an-insider-story">
+                    <div class="blog-design">
+                        <div class="blog-cards">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/Data_Scientist_1920_1280_DsZBGZu.jpg"
+                                alt="Typical day of Data Scientist - An insider story!">
+                        </div>
+                        <div class="author-cont">
+                            <h3>Typical day of Data Scientist - An insider story!</h3>
+                            <span class="author">Saurav Ghosh </span>
+                            <span class="date">| 05 Jul 2019</span>
+                        </div>
+                        <p class="blog-text">I’ve been a Data Scientist for three years now and I can only say that
+                            Chris
+                            Lynch was right -Big Data and Data Science are the foundation of all the trends that are
+                            emerging in the world today.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a class="anchor-link"
+                    href="https://www.edyoda.com/stories/amazon-web-services-aws-cloud-day-bangalore">
+                    <div class="blog-design">
+                        <div class="blog-cards">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/edyoda_blog_aws_cloudday_17may2018_Bangalore_small_ByulIE.jpg"
+                                alt="Amazon Web Services (AWS) Cloud Day - Bangalore">
+                        </div>
+                        <div class="author-cont">
+                            <h3>Amazon Web Services (AWS) Cloud Day - Bangalore</h3>
+                            <span class="author">Kalyan Mahalingam</span>
+                            <span class="date">| 05 Jul 2019</span>
+                        </div>
+                        <p class="blog-text">It was indeed a hectic day with back to back session sandwiched by good
+                            food
+                            and tea (on a lighter note, need to investigate the tactics behind the 5-star hotels keeping
+                            the
+                            plates so heavy. :D)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a class="anchor-link"
+                    href="https://www.edyoda.com/stories/meetup-01-data-migration-at-scale-on-cloud-an-experience">
+                    <div class="blog-design">
+                        <div class="blog-cards">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/cloud-meetup-edyoda-small_b2EXhBe.jpg"
+                                alt="edYoda Meetup #01 : A Date with Cloud">
+                        </div>
+                        <div class="author-cont">
+                            <h3>edYoda Meetup #01 : A Date with Cloud</h3>
+                            <span class="author">Ashish Pandey</span>
+                            <span class="date">| 05 Jul 2019</span>
+                        </div>
+                        <p class="blog-text">If you are a fresh graduate - or new to IT - looking for the next job, you
+                            need
+                            to
+                            read this.The last couple of years zekeLabs gave me a unique opportunity to assess
+                            technology
+                            demand
+                            in the
+                            industry and also to evaluate available</p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a class="anchor-link" href="https://www.edyoda.com/stories/industry-40-the-prospects-journey-ahead">
+                    <div class="blog-design">
+                        <div class="blog-cards">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/pitanjal-industry-4-image-1.jpg"
+                                alt="Industry 4.0 - The Prospects & Journey ahead!">
+                        </div>
+                        <div class="author-cont">
+                            <h3>Industry 4.0 - The Prospects & Journey ahead!</h3>
+                            <span class="author">Pitanjal Dutta</span>
+                            <span class="date">| 05 Jul 2019</span>
+                        </div>
+                        <p class="blog-text">Did you ever dream a world where computers are connected and will
+                            communicate with one another to ultimately make decisions without human involvement?</p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a class="anchor-link" href="https://www.edyoda.com/stories/why-do-database-systems-exist">
+                    <div class="blog-design">
+                        <div class="blog-cards">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/Copy_of_aptitude_1920_1280_LVmu25g.png"
+                                alt="Why do Database Systems Exist ?">
+                        </div>
+                        <div class="author-cont">
+                            <h3>Why do Database Systems Exist ?</h3>
+                            <span class="author">Pitanjal Dutta</span>
+                            <span class="date">| 05 Jul 2019</span>
+                        </div>
+                        <p class="blog-text">A couple of days back, I was having a code review of my program which
+                            scraps
+                            the keyword insights from trending Tweets. But then, my colleague asked me a very
+                            interesting
+                            question which brought back the memories of college days.</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="grid-item">
+                <a class="anchor-link"
+                    href="https://www.edyoda.com/stories/master-your-general-aptitude-job-interview-success">
+                    <div class="blog-design">
+                        <div class="blog-cards">
+                            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/aptitude-small.jpg"
+                                alt="Master your General Aptitude Job Interview Success">
+                        </div>
+                        <div class="author-cont">
+                            <h3>Master your General Aptitude Job Interview Success</h3>
+                            <span class="author">Pitanjal Dutta</span>
+                            <span class="date">| 05 Jul 2019</span>
+                        </div>
+                        <p class="blog-text">A general aptitude becomes very important, when you apply for a job in a
+                            tech
+                            company. You might be highly skilled in your subject domain. However, these basic aptitude
+                            help
+                            a recruiter understand your problem solving abilities if something unexpected comes your way
+                            during your job role.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-edyoda">
+                <h4>EDYODA</h4>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Contact US</p>
+                <p>Terms of Use</p>
+                <p>Privacy Policy</p>
+            </div>
+            <div class="footer-edyoda">
+                <h4>RESOURCES</h4>
+                <p>Learning Paths</p>
+                <p>Courses</p>
+                <p>Learning Videos</p>
+                <p>Educators</p>
+                <p>Edyoda Stories</p>
+                <p>University</p>
+            </div>
+            <div class="footer-edyoda">
+                <h4>FOR ENTERPRISES</h4>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Contact US</p>
+                <p>Terms of Use</p>
+                <p>Privacy Policy</p>
+            </div>
+            <div class="footer-edyoda">
+                <h4>CONNECT</h4>
+                <p class="address">2nd Floor #188, Survey No. - 123/1,
+                    Incubes Building Next to McDonalds,
+                    ITPL Main Rd, Brookefield,
+                    Bengaluru, Karnataka-560037,
+                    India</p>
+                <p>Careers</p>
+                <p>Contact US</p>
+                <p>Terms of Use</p>
+                <p>© 2022
+                    zekeLabs Technologies Private Limited</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
