@@ -18,7 +18,7 @@
         }
 
         .header {
-            height: auto;
+            height: 100px;
             width: 100%;
             position: fixed;
             background: white;
@@ -46,7 +46,6 @@
             color: black;
             margin-left: 10px;
             object-fit: contain;
-            margin-top: 0;
             background-color: white;
             font-size: 20px;
             word-spacing: normal;
@@ -178,7 +177,7 @@
             height: 100%;
             border-top-right-radius: 24px;
             border-top-left-radius: 24px;
-            
+
         }
 
         .author {
@@ -229,26 +228,6 @@
 
         }
 
-
-
-        .header-container {
-            font-size: 18px;
-            margin-left: 400px;
-            /* min-width: 23em; */
-            opacity: .6;
-            word-break: break-all;
-
-            font-family: Raleway, sans-serif;
-            /* font-weight: 500;
-            font-style: normal;
-            font-stretch: normal;
-            /* line-height: 1; */
-            /* letter-spacing: .4px;
-            text-align: left;
-            color: rgba(0, 0, 0, .6); */
-            /* margin-top: 0.5em; */
-        }
-
         footer {
             background-color: #172746;
             height: auto;
@@ -289,6 +268,7 @@
             font-weight: 600;
             letter-spacing: .06em;
             font-style: normal;
+            cursor: pointer;
             background: linear-gradient(269deg, #0048ff, #0096ff);
         }
 
@@ -303,9 +283,48 @@
             color: #000;
         }
 
+        .header-container {
+            font-size: 18px;
+            /* margin-left: 400px; */
+            min-width: 23em;
+            color: rgba(0, 0, 0, .6);
+            opacity: .6;
+            text-align: left;
+            word-break: break-all;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: .4px;
+            font-family: Raleway, sans-serif;
+            ;
+
+
+        }
+
         .header-text {
             display: inline-flex;
-            padding: 10px;
+            margin-left: 250px;
+        }
+
+        .div-nav {
+            display: inline-flex;
+            margin-left: 50px;
+        }
+
+        .span-nav {
+            font-family: Raleway, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: .9px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .dropdown-img {
+            padding: 4px;
+            margin-left: 4px;
+            cursor: pointer;
         }
     </style>
 
@@ -318,6 +337,11 @@
         <div class="header-edyoda-logo">
             <span class="header-logo">EDYODA</span>
             <p><i class="header-stories">Stories</i></p>
+        </div>
+        <div class="div-nav">
+            <span class="span-nav">Explore Categories</span>
+            <span><img class="dropdown-img" alt="dropdown-image"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAYAAAD37n+BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHhJREFUeNpiYGBguAPE/f///2fAh0FqgPguiBEDxC+BeDUQM2NRyAyVewlWCxW0B+L7QHwAiHmRFPNCxUBy9mAxJElVIL4MxBeBWB6KL0LFVOHq0KwXAuJDQHwPikFsIWQ1jFCFcMDIyMgGpFZAuRFA+V/I8gABBgD8EGd4shdx5wAAAABJRU5ErkJggg=="></span>
         </div>
         <div class="header-text">
             <span class="header-container">EdYoda is free learning and knowledge
@@ -333,9 +357,9 @@
 
 
     <main class="home-page">
-<div class="tending-header">
-        <h1>Trending Posts</h1>
-    </div>
+        <div class="tending-header">
+            <h1>Trending Posts</h1>
+        </div>
         <div class="trending-post-images">
             <div class="left-banner">
             </div>
